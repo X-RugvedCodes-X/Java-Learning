@@ -3,8 +3,8 @@ setlocal enabledelayedexpansion
 
 REM ---- Check argument ----
 if "%~1"=="" (
-  echo Usage: debug ClassName OR debug ClassName.java
-  exit /b 1
+echo Usage: debug ClassName OR debug ClassName.java
+exit /b 1
 )
 
 REM ---- Extract class name ----
@@ -14,30 +14,40 @@ REM ---- Config ----
 set SRC_ROOT=src
 set OUT_DIR=out
 
-REM ---- Find source file ----
-set SRC_FILE=
-for /r "%SRC_ROOT%" %%f in (%CLASSNAME%.java) do (
+REM ---- Find source file (robust) ----
+for /f "delims=" %%f in ('where /r "%SRC_ROOT%" %CLASSNAME%.java 2^>nul') do (
   set SRC_FILE=%%f
+  goto :found
 )
 
-if not defined SRC_FILE (
-  echo Error: %CLASSNAME%.java not found under %SRC_ROOT%
-  exit /b 1
-)
+echo Error: %CLASSNAME%.java not found under %SRC_ROOT%
+exit /b 1
 
-REM ---- Make SRC_FILE relative to project root (for display only) ----
+:found
+
+REM ---- Relative path for display ----
 set REL_SRC_FILE=!SRC_FILE:%CD%\=!
 
-REM ---- Make path relative to src/ for package calculation ----
-set REL_PATH=!SRC_FILE:*%SRC_ROOT%\=!
-set REL_PATH=!REL_PATH:\%CLASSNAME%.java=!
+REM ---- Extract package from source ----
+set PACKAGE=
+for /f "tokens=2 delims= " %%p in ('findstr /r "^package " "!SRC_FILE!"') do (
+  set PACKAGE=%%p
+)
+set PACKAGE=!PACKAGE:;=!
 
-REM ---- Convert path to package name ----
-set PACKAGE_NAME=!REL_PATH:\=.!
+REM ---- Output ----
+echo Using source: !REL_SRC_FILE!
+echo.
 
 REM ---- Debug ----
-echo Debugging %PACKAGE_NAME%.%CLASSNAME% ...
-echo Using source: %REL_SRC_FILE%
-jdb -classpath "%OUT_DIR%" %PACKAGE_NAME%.%CLASSNAME%
+if defined PACKAGE (
+  echo Debugging...
+  echo ^> jdb -classpath "%OUT_DIR%" !PACKAGE!.%CLASSNAME%
+  jdb -classpath "%OUT_DIR%" !PACKAGE!.%CLASSNAME%
+) else (
+  echo Debugging...
+  echo ^> jdb -classpath "%OUT_DIR%" %CLASSNAME%
+  jdb -classpath "%OUT_DIR%" %CLASSNAME%
+)
 
 endlocal
