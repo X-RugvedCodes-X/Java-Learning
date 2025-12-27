@@ -31,7 +31,6 @@ class PersonB extends PersonA {
 }
 
 //^ Multiple Inheritance is not allowed in Java, which means one child class cannot have multiple parent classes.
-// TODO: Constructor Execution in Case of Inheritance to be Covered Later.
 
 public class Inheritance {
   public static void main(String[] args) {
