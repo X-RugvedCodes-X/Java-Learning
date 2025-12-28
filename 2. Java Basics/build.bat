@@ -36,8 +36,8 @@ if not exist "%OUT_DIR%" mkdir "%OUT_DIR%"
 
 REM ---- Compile ----
 echo Compiling with Debug Symbols for jdb
-echo ^> javac -g -d "%OUT_DIR%" "!REL_SRC_FILE!"
-javac -g -d "%OUT_DIR%" "!SRC_FILE!"
+echo ^> javac -g -cp "%OUT_DIR%" -d "%OUT_DIR%" "!SRC_FILE!"
+javac -g -cp "%OUT_DIR%" -d "%OUT_DIR%" "!SRC_FILE!"
 if errorlevel 1 exit /b 1
 
 REM ---- Extract package name ----

@@ -8,12 +8,14 @@ public class ArrayBasics {
   public static void main(String[] args) {
     System.out.println("hello, arrays!");
 
-    // int[] nums = new int[5];        //* By Default 0s
+    //* By Default 0s
+    // int[] nums = new int[5];        
     // int[] digits = {1, 2, 3, 4 ,5};
     // printArray(digits);
     // printArray(nums);
     
-    // String[] arr = new String[4];   //* By Default null (null is a literal and we can cast it into any reference type), Eg. String str = null;
+    //* By Default null (null is a literal and we can cast it into any reference type), Eg. String str = null;
+    // String[] arr = new String[4];   
     // System.out.println(arr[0]);
 
     Scanner sc = new Scanner(System.in);

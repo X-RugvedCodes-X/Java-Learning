@@ -30,7 +30,7 @@ set REL_SRC_FILE=!SRC_FILE:%CD%\=!
 
 REM ---- Extract package name ----
 set PACKAGE=
-for /f "tokens=2 delims= " %%p in ('findstr /r "^package " "!SRC_FILE!"') do (
+for /f "tokens=2 delims= " %%p in ('findstr /B /C:"package " "!SRC_FILE!"') do (
   set PACKAGE=%%p
 )
 set PACKAGE=!PACKAGE:;=!
