@@ -1,7 +1,8 @@
 {
   "java.project.sourcePaths": [
-    "2. Java Basics\\src"
+    "2. Java Basics\\src",
+    "3. Interfaces and Lambda Expression\\src"
   ],
   "java.project.referencedLibraries": [],
-  "java.project.outputPath": "2. Java Basics\\out"
+  "java.project.outputPath": "out"
 }

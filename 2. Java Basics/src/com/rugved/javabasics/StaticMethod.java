@@ -34,8 +34,9 @@ class Mobile {
 
 public class StaticMethod {
   public static void main(String[] args) throws ClassNotFoundException {
-
-    Class.forName("com.rugved.javabasics.Mobile");  //* This does not creates the object but just loads the class manually at the time of class Loading subsystem phase, and we know that when the class is loaded, then and there static variable memory is allocated on the Heap and static initialization block is executed. This prints "Inside Static Initialization Block" even if we dont create any object.
+    
+    //* This does not creates the object but just loads the class manually at the time of class Loading subsystem phase, and we know that when the class is loaded, then and there static variable memory is allocated on the Heap and static initialization block is executed. This prints "Inside Static Initialization Block" even if we dont create any object.
+    Class.forName("com.rugved.javabasics.Mobile");  
 
     System.out.println("hello, static method");
 
