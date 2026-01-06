@@ -1,4 +1,4 @@
-package com.rugved.main;
+package com.rugved.interfaceToCode;
 
 // * Injecting Dependent Object / Dependency into target class is called as Dependency Injection. If this is done through setter then setter Injection and if through constructor then constructor injection.
 

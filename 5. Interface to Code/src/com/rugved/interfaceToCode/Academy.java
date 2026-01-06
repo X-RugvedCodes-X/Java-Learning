@@ -1,4 +1,4 @@
-package com.rugved.main;
+package com.rugved.interfaceToCode;
 
 import com.rugved.services.ICourse;
 

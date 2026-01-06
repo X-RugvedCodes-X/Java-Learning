@@ -1,5 +1,7 @@
 package com.rugved.oops;
 
+// * In case of super method call and java initialization block, the super method will execute first and then the Java Initialization block and after that the contents of the constructor.
+
 class Parent {
   int i = 10;
 

@@ -1,4 +1,4 @@
-package com.rugved.main;
+package com.rugved.lambdaExpression;
 
 // * An interface which has only one method is called Functional interface
 // * We can have as many as default methods in a Functional Interface just that the abstract method should only be one

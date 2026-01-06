@@ -5,6 +5,9 @@
     "4. Loose Coupling\\src",
     "5. Interface to Code\\src",
     "6. Lambda Expressions\\src",
+    "7. Exception Handling\\src",
+    "8. Arrays\\8.1 Array Basics\\src",
+    "9. Strings\\src",
   ],
   "java.project.referencedLibraries": [],
   "java.project.outputPath": "out"

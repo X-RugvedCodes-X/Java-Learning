@@ -1,4 +1,4 @@
-package com.rugved.main;
+package com.rugved.lambdaExpression;
 
 public class Demo1 {
   public void show() {
