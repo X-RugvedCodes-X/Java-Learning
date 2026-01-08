@@ -11,6 +11,7 @@ public class Main {
     System.out.println("hello, world !");
 
     ArrayList arrayList1 = new ArrayList<>();
+    // * These are below are stored as Objects and not any Primitive Data type (These are of type Object Class By Default)
     arrayList1.add(100);
     arrayList1.add("Rugved");
     arrayList1.add('r');
@@ -33,13 +34,19 @@ public class Main {
     // arrayList1.add(300);
     // arrayList1.add(400);
 
-    System.out.println(arrayList2.contains(20));  // * true
-    System.out.println(arrayList2.containsAll(arrayList1)); // * true
+    // System.out.println(arrayList2.contains(20));  // * true
+    // System.out.println(arrayList2.containsAll(arrayList1)); // * true
 
     // System.out.println(arrayList1);
     // System.out.println(arrayList2);
-    // for (int i = 0; i < arrayList1.size(); ++i) {
-    //   System.out.print(arrayList1.get(i) + " ");
+    for (int i = 0; i < arrayList1.size(); ++i) {
+      System.out.print(arrayList1.get(i) + " ");
+    }
+    System.out.println();
+
+    // ! Not Recmommended - Discussed in Iterator Section
+    // for (Object object : arrayList2) {
+    //   System.out.print(object + " ");
     // }
     // System.out.println();
   }
