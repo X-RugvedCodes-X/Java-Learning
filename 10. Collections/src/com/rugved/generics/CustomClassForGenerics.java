@@ -1,6 +1,6 @@
 package com.rugved.generics;
 
-public class CustomClassForGenerics<T> {
+public class CustomClassForGenerics<T> implements IGenerics<T> {
   private T referenceValue;
 
   public CustomClassForGenerics(T referenceValue) {

@@ -1,7 +1,7 @@
 package com.rugved.vector;
 
 import java.util.Enumeration;
-import java.util.Iterator;
+// import java.util.Iterator;
 import java.util.Vector;
 
 // * A Legacy Data Structure in Java which was part of Enumeration Interface First and then Added to the List Family Interface
@@ -11,7 +11,7 @@ import java.util.Vector;
 public class Main {
   public static void main(String[] args) {
     System.out.println("hello, vector !");
-    Vector v = new Vector<>();
+    Vector<Integer> v = new Vector<>();
     // * Both addElement and add method to the same work
     v.addElement(100);
     v.add(200);
@@ -25,7 +25,7 @@ public class Main {
     // System.out.println();
 
     // * Enumeration does the same job as above iterator is doing
-    Enumeration e = v.elements();
+    Enumeration<Integer> e = v.elements();
     while (e.hasMoreElements()) {
       System.out.print(e.nextElement() + " ");
     }

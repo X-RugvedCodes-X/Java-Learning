@@ -25,9 +25,9 @@ public class Main {
     // while(i1.hasNext()) {
     //   System.out.print(i1.next() + " ");
     //   arrayList.add(20);          
-    //   // * If this is done in normal for loop then it goes on till Stack Overflow (No Exception is Reported) but using iterators and writing hasNext and next in such a way, then it returns Exception which is good, So in Case of Iterators JVM Understands Concurrent Modifications
-    //   // * Exception in thread "main" java.util.ConcurrentModificationException
-    //   // * This is called fail-fast - this means concurrent modification is stopped but exception is generated
+      // * If this is done in normal for loop then it goes on till Stack Overflow (No Exception is Reported) but using iterators and writing hasNext and next in such a way, then it returns Exception which is good, So in Case of Iterators JVM Understands Concurrent Modifications
+      // * Exception in thread "main" java.util.ConcurrentModificationException
+      // * This is called fail-fast - this means concurrent modification is stopped but exception is generated
     // }
     // System.out.println();
 
@@ -42,10 +42,10 @@ public class Main {
     // while(i2.hasNext()) {
     //   System.out.print(i2.next() + " ");
     //   copyOnWriteArrayList.add(20);          
-    //   // * Now Here we don't get any exception but the value 20 is also not added, this is called fail-safe case for the concurrent modification
-    //   // * Mind you - to use fail-safe case use the CopyOnWrite Collections from the concurrent package
+      // * Now Here we don't get any exception but the value 20 is also not added, this is called fail-safe case for the concurrent modification
+      // * Mind you - to use fail-safe case use the CopyOnWrite Collections from the concurrent package
     // }
-    // // * 100 200 300 400 500 
+    // * 100 200 300 400 500 
     // System.out.println();
 
     // * Similarly we even have ListIterators

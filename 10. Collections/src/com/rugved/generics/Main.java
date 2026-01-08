@@ -26,14 +26,16 @@ public class Main {
     // }
 
     CustomClassForGenerics<Integer> customClassForGenerics = new CustomClassForGenerics<Integer>(40);
-    // CustomClassForGenerics<Integer> customClassForGenerics = new CustomClassForGenerics<Integer>("Java"); // ! Compile Time Error, as String cannot resolved to Integer
+
+    // ! Compile Time Error, as String cannot resolved to Integer
+    // CustomClassForGenerics<Integer> customClassForGenerics = new CustomClassForGenerics<Integer>("Java"); 
     customClassForGenerics.displayType();
     System.out.println(customClassForGenerics.getReference());    // * 40
-
+    System.out.println("*".repeat(40));
     // & Before Overriding toString
     // System.out.println(customClassForGenerics);                   // * com.rugved.generics.CustomClassForGenerics@7e9e5f8a
 
     // ^ After Overriding toString
-    System.out.println(customClassForGenerics);       // * Type Of Generic Is: java.lang.Integer, Value is: 40  
+    System.out.println(customClassForGenerics);       // * Type Of Generic Is: java.lang.Integer, Value is: 40
   }
 };

@@ -7,7 +7,7 @@ import java.util.HashSet;
 public class Main {
   public static void main(String[] args) {
     System.out.println("hello, hashset !");
-    HashSet hashSet = new HashSet<>();
+    HashSet<Integer> hashSet = new HashSet<>();
     hashSet.add(100);
     hashSet.add(150);
     hashSet.add(175);
@@ -16,6 +16,6 @@ public class Main {
     hashSet.add(50);
     hashSet.add(175);   // * Duplicates Not allowed
     System.out.println(hashSet);    // * [50, 35, 100, 150, 75, 175]
-
+    
   }
 };
