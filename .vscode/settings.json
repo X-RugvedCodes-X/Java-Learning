@@ -9,6 +9,8 @@
     "08. Arrays\\8.1 Array Basics\\src",
     "09. Strings\\src",
     "10. Collections\\src",
+    "11. Date and Time API\\src",
+    "12. Map\\src",
   ],
   "java.project.referencedLibraries": [],
   "java.project.outputPath": "out"
