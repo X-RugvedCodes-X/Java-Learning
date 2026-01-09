@@ -26,7 +26,7 @@ class Alpha implements Demo2 {
   }
 };
 
-//* Interface having no methods is called tagged interface or markup interface, though it's also an empty interface, the implementation is given at run time and majorly such design if used in Serialization, Deserialization.
+//* Interface having no methods is called tagged interface or markup interface, though it's also an empty interface, the implementation is given at run time and majorly such design is used in Serialization, Deserialization.
 // interface Beta {
 
 // };

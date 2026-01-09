@@ -68,7 +68,7 @@ public class Main {
 
     Set<Map.Entry<Integer, String>> keyValues = treeMap.entrySet();
     Iterator<Map.Entry<Integer, String>> it = keyValues.iterator();
-    while (it.hasNext()) {
+    while (it.hasNext()) { 
       // System.out.print(it.next() + " ");
       Map.Entry<Integer, String> pair = it.next();
       System.out.println("key: " + pair.getKey() + ", Value: " + pair.getValue());
