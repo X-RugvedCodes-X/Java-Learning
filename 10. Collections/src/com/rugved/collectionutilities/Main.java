@@ -88,7 +88,7 @@ public class Main {
     System.out.println("\n" + "*".repeat(60) + "\n");
   }
 
-  private static<T> void printArrayList(ArrayList<T> arrayList) {
+  private static <T> void printArrayList(ArrayList<T> arrayList) {
     for (T element : arrayList) {
       System.out.println(element);
     }
