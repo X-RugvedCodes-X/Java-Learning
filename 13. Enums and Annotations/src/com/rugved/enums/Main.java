@@ -41,7 +41,7 @@ public class Main {
     //   System.out.println(w.ordinal() + ": " + w);
     // }
 
-    // Result result = Result.PASS;
+    Result result = Result.PASS;      // This Object Utilization of Enum already prints the constructor, the number of times the constants are there
     // result.setMarks(44);
     // System.out.println(result.getMarks());
     // ^ The Above Line Prints: 
@@ -50,11 +50,11 @@ public class Main {
     // * 44
 
     // * The Below Statement do the same as Above
-    Result.PASS.setMarks(44);
-    int marks1 = Result.PASS.getMarks();
-    System.out.println(marks1);
+    // Result.PASS.setMarks(44);
+    // int marks1 = Result.PASS.getMarks();
+    // System.out.println(marks1);
 
-    int marks2 = Result.FAIL.getMarks();
-    System.out.println(marks2);   // * 0   
+    // int marks2 = Result.FAIL.getMarks();
+    // System.out.println(marks2);   // * 0   
   }
 };

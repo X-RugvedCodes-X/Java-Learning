@@ -13,6 +13,7 @@
     "12. Map\\src",
     "13. Enums and Annotations\\src",
     "14. Multithreading\\src",
+    "15. Stream API\\src"
   ],
   "java.project.referencedLibraries": [],
   "java.project.outputPath": "out"

@@ -9,7 +9,7 @@ public class Main {
     System.out.println("hello, world !");
     // System.out.println("Connection Started");
 
-    // // * When Exception is Ducked or rethrowed
+    // * When Exception is Ducked or rethrowed
     // try {
     //   Division.divide();
     // } catch(ArithmeticException e) {
