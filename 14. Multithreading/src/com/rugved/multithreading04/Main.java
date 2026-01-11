@@ -1,9 +1,9 @@
-package com.rugved.multithreading03;
+package com.rugved.multithreading04;
 
 public class Main {
 
   public static void main(String[] args) {
-    System.out.println("hello, race condition");
+    // * Continuing the same example, Now using synchronized keyword for selective statements only 
     Car c = new Car();
     Thread thread1 = new Thread(c);
     Thread thread2 = new Thread(c);
@@ -16,8 +16,5 @@ public class Main {
     thread1.start();
     thread2.start();
     thread3.start();
-
-    // * Now we can get the clear difference between StringBuffer and StringBuilder considering thread-safety and synchronization
-
   }
 }

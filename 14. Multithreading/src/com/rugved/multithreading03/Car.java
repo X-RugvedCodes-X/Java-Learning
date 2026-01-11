@@ -2,6 +2,8 @@ package com.rugved.multithreading03;
 
 public class Car implements Runnable {
 
+  // * Avoiding Race Condition using synchronized
+  // * Race Condition means Each thread races to complete their task irrespective of being in sync or not
   @Override
   synchronized public void run() {
     try {
@@ -15,6 +17,5 @@ public class Car implements Runnable {
     } catch(InterruptedException e) {
       e.printStackTrace();
     }
-  }
-  
+  } 
 }
