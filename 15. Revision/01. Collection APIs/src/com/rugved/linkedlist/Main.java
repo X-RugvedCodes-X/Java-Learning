@@ -28,6 +28,7 @@ public class Main {
     // * removeAll method is also there in ArrayList
 
     // ^ LinkedList is a very Powerful class it can also behave like ArrayList, Stack or even Queue
+    // ^ It is more Efficient for Insertion and Deletion Operation as compared to ArrayList
     
   }
 }

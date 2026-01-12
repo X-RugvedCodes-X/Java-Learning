@@ -67,7 +67,8 @@ public class Main {
     // } catch (InterruptedException e) {
     //   e.printStackTrace();
     // }
-    // System.out.println("Size of List: " + list.size());   // ! Gives Random value like 1422, 1615, etc because not thread safe any thread can access abruptly
+    // System.out.println("Size of List: " + list.size());   
+    // ! Gives Random value like 1422, 1615, etc because not thread safe any thread can access abruptly and there is no synchronization
 
     // * Vector Resolves This Concern
     Vector<Integer> list = new Vector<>();
