@@ -30,11 +30,11 @@ public class Main {
     // }
     // sc.close();
 
-    // // ^ Important Exceptions to Remember
-    // // * ArrayOutOfBoundsException
-    // // * NegativeArraySizeException
+    // ^ Important Exceptions to Remember
+    // * ArrayOutOfBoundsException
+    // * NegativeArraySizeException
 
-    // // * Though Arrays store homogenous type of data only, we can do something like this:
+    // * Though Arrays store homogenous type of data only, we can do something like this:
     // Object[] arr = new Object[3];
     // arr[0] = "Rugved";
     // arr[1] = 21;
