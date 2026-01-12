@@ -32,22 +32,22 @@ public class Main {
     // System.out.println(search);     // * 3
 
     // * Using LinkedList as Stack as Java as Doubly Linked List
-    LinkedList<Integer> linkedList = new LinkedList<>();
-    linkedList.addLast(1);
-    linkedList.addLast(2);
-    linkedList.addLast(3);
-    linkedList.addLast(4);
-    linkedList.getLast();       // * peek
-    linkedList.removeLast();    // * pop
-    linkedList.size();
-    linkedList.isEmpty();
+    // LinkedList<Integer> linkedList = new LinkedList<>();
+    // linkedList.addLast(1);
+    // linkedList.addLast(2);
+    // linkedList.addLast(3);
+    // linkedList.addLast(4);
+    // linkedList.getLast();       // * peek
+    // linkedList.removeLast();    // * pop
+    // linkedList.size();
+    // linkedList.isEmpty();
 
     // * Using ArrayList as Stack (But not Good Practice)
-    ArrayList<Integer> arrayList = new ArrayList<>();
-    arrayList.add(1);
-    arrayList.add(2);
-    arrayList.add(3);
-    arrayList.get(arrayList.size() - 1); // * peek
-    arrayList.remove(arrayList.size() - 1); // * pop
+    // ArrayList<Integer> arrayList = new ArrayList<>();
+    // arrayList.add(1);
+    // arrayList.add(2);
+    // arrayList.add(3);
+    // arrayList.get(arrayList.size() - 1);      // * peek
+    // arrayList.remove(arrayList.size() - 1);   // * pop
   }
 }
