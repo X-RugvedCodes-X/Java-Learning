@@ -19,12 +19,12 @@ public class Main {
     // * Interally written in ArrayList Implementation, which proves default capacity is 10, where it increases 1.5 times of the origial when full
     // private static final int DEFAULT_CAPACITY = 10;  
     
-    // ^ Adding Elements in ArrayList
+    // ^ Adding Elements in ArrayList (addition at last takes constant time O(1))
     // list.add(1);
     // list.add(2);
     // list.add(10);
 
-    // ^ Accessing Elements in ArrayList
+    // ^ Accessing Elements in ArrayList (.get(index) - constant time)
     // System.out.println(list.get(0));
     // System.out.println(list.get(1));
     // System.out.println(list.get(2));
@@ -103,6 +103,7 @@ public class Main {
 
     // * We can even do this to get a perfectly Modifiable ArrayList
     List<String> list5 = new ArrayList<>(list3);    // * So in this constructor we can either give a capacity or a collection
+    // * Addition at end takes constant time
     list5.add("Mongo");
     list5.add("Cherry");
     list5.add("Strawberry");
