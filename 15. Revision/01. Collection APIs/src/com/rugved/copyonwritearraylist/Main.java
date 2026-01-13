@@ -45,7 +45,7 @@ public class Main {
     // for(String item : shoppingList) {   // * Loop runs on the original one only
     //   System.out.println(item);
     //   if(item.equals("Eggs")) {   // * No Exception
-    //     shoppingList.add("Butter");      // ^ We are Modigying while Reading which is not good as ArrayList is not thread-safe  
+    //     shoppingList.add("Butter");      // ^ No Issues and Butter is added
     //     System.out.println("Added Butter While Reading.");  
     //   }
     // }

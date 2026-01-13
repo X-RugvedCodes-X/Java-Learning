@@ -2,6 +2,7 @@ package com.rugved.linkedlist;
 
 import java.util.Arrays;
 import java.util.LinkedList;
+import java.util.List;
 
 public class Main {
   public static void main(String[] args) {
@@ -29,6 +30,12 @@ public class Main {
 
     // ^ LinkedList is a very Powerful class it can also behave like ArrayList, Stack or even Queue
     // ^ It is more Efficient for Insertion and Deletion Operation as compared to ArrayList
+    // ^ For Fast Accessing and Reading Use HashTable APIs
+
+    LinkedList<Integer> numbers = new LinkedList<>(List.of(1, 2, 3, 4, 5));
+    LinkedList<Integer> numbersToRemove = new LinkedList<>(List.of( 2, 4, 5));
+    numbers.removeAll(numbersToRemove);
+    System.out.println(numbers);    // * [1, 3]
     
   }
 }

@@ -7,17 +7,17 @@ import java.util.Stack;
 public class Main {
   public static void main(String[] args) {
     // System.out.println("hello, stack");
-    // Stack<Integer> stack = new Stack<>();
-    // stack.push(1);
-    // stack.push(2);
-    // stack.push(3);
-    // stack.push(4);
-    // stack.push(5);
-    // System.out.println(stack);
+    Stack<Integer> stack = new Stack<>();
+    stack.push(1);
+    stack.push(2);
+    stack.push(3);
+    stack.push(4);
+    stack.push(5);
+    System.out.println(stack);
     // Integer removedObject = stack.pop();  // * Removes and returns object at the top of the stack
     // System.out.println(removedObject);    // * 5
     // System.out.println(stack);            // * [1, 2, 3, 4]
-    // Integer topElement = stack.peek();
+    // Integer topElement = stack.peek();  // * Looks at the object at the top of this stack without removing it from the stack. returns the object at the top of this stack
     // System.out.println(topElement);       // * 4
     
     // boolean checkStack = stack.isEmpty();
@@ -28,10 +28,10 @@ public class Main {
 
     // * Some Specialized methods of Stack class
     // * returns the 1-based position from the top of the stack where the object is located; the return value -1 indicates that the object is not on the stack
-    // int search = stack.search(2);  
-    // System.out.println(search);     // * 3
+    int search = stack.search(2); // * Param as Object and returns  1-based position from top of the stack
+    System.out.println(search);     // * 3
 
-    // * Using LinkedList as Stack as Java as Doubly Linked List
+    // * Using LinkedList as Stack 
     // LinkedList<Integer> linkedList = new LinkedList<>();
     // linkedList.addLast(1);
     // linkedList.addLast(2);

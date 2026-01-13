@@ -1,10 +1,10 @@
 package com.rugved.arraylist;
 
-import java.lang.reflect.Field;
+// import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
-import java.util.Comparator;
+// import java.util.Collections;
+// import java.util.Comparator;
 import java.util.List;
 
 public class Main {
@@ -13,7 +13,7 @@ public class Main {
 
     // * ArrayList is a Dynamic Array Like Data structure unlike a regular array which has fixed size
 
-    ArrayList<Integer> list = new ArrayList<>();  // * ArrayList<Integer>(); Skip this from Java 7
+    // ArrayList<Integer> list = new ArrayList<>();  // * ArrayList<Integer>(); Skip this from Java 7
 
     // ^ Checking Initial Capacity of ArrayList (Mind You Capacity means how many elements it can hold; it grows dynamically)
     // * Interally written in ArrayList Implementation, which proves default capacity is 10, where it increases 1.5 times of the origial when full
@@ -39,7 +39,7 @@ public class Main {
     //   System.out.println(list.get(i));
     // }
 
-    // ^ Iteration in ArrayList using for each loop
+    // ^ Iteration in ArrayList using Ranged Based for loop
     // for (Integer number : list) {
     //   System.out.println(number);
     // }
@@ -144,13 +144,14 @@ public class Main {
     // System.out.println(list7.contains(2));    // ! false
 
     // ^ From List to Array
-    // List<Integer> list8 = new ArrayList<>();
-    // list8.add(10);
-    // list8.add(20);
-    // list8.add(30);
-    // list8.add(40);
-    // Object[] array1 = list8.toArray();
-    // Integer[] array2 = list8.toArray(new Integer[0]);
+    List<Integer> list8 = new ArrayList<>();
+    list8.add(10);
+    list8.add(20);
+    list8.add(30);
+    list8.add(40);
+    Object[] array1 = list8.toArray();
+    // Integer[] array2 = list8.toArray(new Integer[0]);    // * Syntax is: list.toArray(new Object[0]);
+    // Integer[] array2 = (Integer[]) list8.toArray();      // * Another way
     
     // ^ Sorting An ArrayList (Using Collections Class and list.sort(Comparator))
     List<Integer> list9 = new ArrayList<>();
@@ -163,10 +164,11 @@ public class Main {
     list9.sort(null);           // * Using Natural Order of Sorting
     // printArrayList(list9);        // * [10, 20, 30, 40]
     // * Sort using Comparator (var keyword is from Java 11 used in Lambdas)
-    list9.sort((var num1, var num2) -> {
-      // return num1 - num2;     // * For Ascending
-      return num2 - num1;     // * For Descending
-    });
+    // list9.sort((var num1, var num2) -> {
+     // return num1 - num2;     // * For Ascending
+    //   return num2 - num1;     // * For Descending
+    // });
+    list9.sort((num1, num2) -> num2 - num1);    // * Shorter Way
     // printArrayList(list9);    // * [40, 30, 20, 10]
 
     // ^ Comparator - It is an interface used for custom ordering based on our preference
@@ -238,7 +240,7 @@ public class Main {
     */
 
     // * For the Same Above result we can even do 
-    students.sort((var student1, var student2) -> {
+    students.sort((student1, student2) -> {
       if (student2.getGpa() - student1.getGpa() > 0)
         return 1;
       else if(student2.getGpa() - student1.getGpa() < 0)
