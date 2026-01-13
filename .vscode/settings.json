@@ -15,6 +15,7 @@
     "14. Multithreading\\src",
     "15. Revision\\01. Collection APIs\\src",
     "15. Revision\\02. Map\\src",
+    "15. Revision\\03. LRU Cache\\src",
   ],
   "java.project.referencedLibraries": [],
   "java.project.outputPath": "out"
