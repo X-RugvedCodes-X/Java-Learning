@@ -6,6 +6,7 @@ import java.util.Arrays;
 // import java.util.Collections;
 // import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Main {
   public static void main(String[] args) throws NoSuchFieldException, IllegalArgumentException, IllegalAccessException {
@@ -255,6 +256,36 @@ public class Main {
     // * Comparator can be even given in Collections.sort()
     // Comparator<Student> comparator = Comparator.comparing(Student::getGpa).reversed().thenComparing(Student::getName); // * Don't write getGpa() just the function name no function call
     // Collections.sort(students, comparator);
+
+    // ^ Correct ways to convert int[] → ArrayList<Integer> 
+    // * Recommended (Java 8+) using streams
+    // int[] arr = {1, 8, 10, 4, 0, -1, 7};
+    // ArrayList<Integer> arrList = Arrays.stream(arr)
+    //                                   .boxed()
+    //                                   .collect(Collectors.toCollection(ArrayList::new));
+
+    // * Using loop (simplest & fastest)
+    // int[] arr = {1, 8, 10, 4, 0, -1, 7};
+    // ArrayList<Integer> arrList = new ArrayList<>();
+    // for (int x : arr) {
+    //     arrList.add(x);
+    // }
+
+    // * If array was Integer[] instead
+    // Integer[] arr = {1, 8, 10, 4, 0, -1, 7};
+    // ArrayList<Integer> arrList = new ArrayList<>(Arrays.asList(arr));
+
+    // ^ toArray() - converts a Collection → Array
+    // * Object Method
+    // Integer[] arr = arrList.toArray(new Integer[0]);
+
+    // * Using Streams
+    // int[] arr = arrList.stream()
+    //                .mapToInt(Integer::intValue)
+    //                .toArray();
+
+    // ^ Primitive arrays (int[]) do NOT work with Arrays.asList() the way we expect.
+
   }
 
   private static <T> void printArrayList(List<T> arrayList) {

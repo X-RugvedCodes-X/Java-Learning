@@ -18,7 +18,7 @@ public class Main {
     // * Accessing Elements in A Map
     // String name = hashMap.get(3);
     // System.out.println(name);       // * Sanskar
-    // String name = hashMap.get(10);  // * returns null is not present
+    // String name = hashMap.get(10);  // * returns null if not present
     // System.out.println(name);       // * null
 
     // boolean checKey = hashMap.containsKey(2);
@@ -48,7 +48,7 @@ public class Main {
     * 3: Sanskar
     */
 
-    // for (Map.Entry<Integer,String> entry : entries) {
+    // for (Map.Entry<Integer, String> entry : entries) {
     //   System.out.println(entry.getValue().toUpperCase());
     // }
     /*
@@ -67,7 +67,7 @@ public class Main {
     // List<Integer> list = Arrays.asList(4, 10, 0, -1, 50, 72, 92, 100, 98);
     // list.contains(50);    // * Takes O(n) worst case
 
-    // * But Contains Method of Map gives in average O(1) constant time
+    // * Contains Method of Map gives in average O(1) constant time
 
     // * HashMap Constructor takes InitialCapacity and LoadFactor as params too
     // HashMap<Integer, String> hashMap = new HashMap<Integer, String>(17, 0.5f);
