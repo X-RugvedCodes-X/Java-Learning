@@ -3,10 +3,18 @@ package com.rugved.arraylist;
 // import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Comparator;
 // import java.util.Collections;
 // import java.util.Comparator;
 import java.util.List;
-import java.util.stream.Collectors;
+
+// * There are primarily these many interfacess: Collection, List, Set, Queue, Deque, Map
+// * Collection is parent of everyone, Also Iterable interface is parent of Collection
+// * These interfaces are implemented by certain classes
+// * Eg. ArrayList implements List, LinkedList implements List, etc
+// ^ For more check in the diagrams
 
 public class Main {
   public static void main(String[] args) throws NoSuchFieldException, IllegalArgumentException, IllegalAccessException {
@@ -30,7 +38,7 @@ public class Main {
     // System.out.println(list.get(1));
     // System.out.println(list.get(2));
     // ! throws exception - java.lang.IndexOutOfBoundsException
-    // System.out.println(list.get(3));    
+    // System.out.println(list.get(3));
 
     // ^ Checking Size of ArrayList (Mind You size() gives number of elements present in the ArrayList)
     // System.out.println(list.size());    // * 3
@@ -82,11 +90,12 @@ public class Main {
     List<String> list1 = new ArrayList<>();
     // System.out.println(list1.getClass().getName());
     
-    // * Arrays.asList() method returns a fixed size list we cannot add anything to it but we can replace the element in it
+    // ^ Ways to create ArrayList on the fly
+    // * Arrays.asList() method returns a fixed size list we cannot add anything to it or remove from it, but we can replace the element in it
     List<String> list2 = Arrays.asList("Monday", "Tuesday");
     // System.out.println(list2.getClass().getName());   // * java.util.Arrays$ArrayList
     // list2.add("Wednesday"); // ! Throws Exception java.lang.UnsupportedOperationException
-    list2.set(1, "Sunday");
+    list2.set(1, "Sunday");   // * We can replace though
     // System.out.println(list2);      // * [Monday, Sunday]
     // list2.remove(1);    // ! java.lang.UnsupportedOperationException
     // System.out.println(list2);
@@ -117,7 +126,7 @@ public class Main {
     list5.addAll(list6);
     // System.out.println(list5);    // * Apple, Banana, Pineapple, Watermelon, Mongo, Cherry, Strawberry, Orange, Kiwi, Chickoo]
 
-    // * Removing Element By Value
+    // * Removing Element By Value - removes first occurence, takes an object as parameter
     list5.remove("Mango");
     // System.out.println(list5);    // * [Apple, Banana, Pineapple, Watermelon, Mongo, Cherry, Strawberry, Orange, Kiwi, Chickoo]
 
@@ -162,6 +171,14 @@ public class Main {
     list9.add(40);
     // Collections.sort(list9);
     // printArrayList(list9);      // * [10, 20, 30, 40]
+    // * Traditionally it's done the below way
+    // class MyComparator implements Comparator<Integer> {
+    //   @Override
+    //   public int compare(Integer o1, Integer o2) {
+    //     return o1 - o2;
+    //   }
+    // }
+    // list9.sort(new MyComparator());
     list9.sort(null);           // * Using Natural Order of Sorting
     // printArrayList(list9);        // * [10, 20, 30, 40]
     // * Sort using Comparator (var keyword is from Java 11 used in Lambdas)
@@ -178,7 +195,16 @@ public class Main {
     // * But we want that the smallest size word appears first (based on length of string)
     // * Comparator is a functional Interface using the compare method which takes two objects of same type 
     // * int compare(T o1, T o2);
+    // class StringLenghtComparator implements Comparator<String> {
+    //   @Override
+    //   public int compare(String word1, String word2) {
+        // * For Descending order sort in length
+    //     return word2.length() - word1.length();
+    //   }
+    // }
+    // words.sort(new StringLenghtComparator());
 
+    // * using lambdas
     // * Ascending
     // words.sort((var word1, var word2) -> {
     //   return word1.length() - word2.length();
@@ -286,6 +312,13 @@ public class Main {
 
     // ^ Primitive arrays (int[]) do NOT work with Arrays.asList() the way we expect.
 
+    // * Gives ArrayList with 10 elements as 0s
+    List<Integer> arrayList = new ArrayList<>(Collections.nCopies(10, Integer.valueOf(0)));
+    // printArrayList(arrayList);    // * [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+    // * replaces those 10 elements with value 6
+    Collections.fill(arrayList, Integer.valueOf(6));
+    // printArrayList(arrayList);    // * [6, 6, 6, 6, 6, 6, 6, 6, 6, 6]
   }
 
   private static <T> void printArrayList(List<T> arrayList) {
