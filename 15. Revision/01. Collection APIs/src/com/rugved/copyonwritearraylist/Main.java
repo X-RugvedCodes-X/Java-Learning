@@ -88,7 +88,7 @@ public class Main {
     // });
     // readerThread.start();
     // writerThread.start();
-    // * Output: Exception in thread "Thread-0" java.util.ConcurrentModificationException
+    // ! Output: Exception in thread "Thread-0" java.util.ConcurrentModificationException
 
     // * On Using CopyOnWriteArrayList()
     List<String> sharedList = new CopyOnWriteArrayList<>();

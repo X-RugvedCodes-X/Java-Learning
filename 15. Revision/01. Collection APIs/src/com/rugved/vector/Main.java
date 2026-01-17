@@ -14,6 +14,8 @@ public class Main {
     // Vector<Integer> vector = new Vector<>();    // * By Default Capacity is 10
     // System.out.println(vector.capacity());
 
+
+    // * Vector<Integer> vector = new Vector<>(intialCapacity, capacityIncrement);
     // Vector<Integer> vector = new Vector<>(5, 3); // * If leaven Blank then initialCapacity is 10 and increament is double
     // vector.add(10);
     // vector.add(10);
@@ -37,8 +39,12 @@ public class Main {
     // Vector<Integer> vector1 = new Vector<>(linkedList);
     // System.out.println(vector1);    // * [1, 2, 3]
 
-    // Vector<Integer> vector2 = new Vector<>(Arrays.asList(2, 3, 4));
+    Vector<Integer> vector2 = new Vector<>(Arrays.asList(2, 3, 4));
     // System.out.println(vector2);    // * [2, 3, 4]
+    vector2.add(5);
+    vector2.add(6);
+    vector2.add(7);
+    System.out.println(vector2);    // * [2, 3, 4, 5, 6, 7]
 
     // * clear() in vector
     // vector2.clear();

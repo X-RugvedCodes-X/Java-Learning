@@ -3,7 +3,6 @@ package com.rugved.arraylist;
 // import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
 // import java.util.Collections;
@@ -26,7 +25,7 @@ public class Main {
 
     // ^ Checking Initial Capacity of ArrayList (Mind You Capacity means how many elements it can hold; it grows dynamically)
     // * Interally written in ArrayList Implementation, which proves default capacity is 10, where it increases 1.5 times of the origial when full
-    // private static final int DEFAULT_CAPACITY = 10;  
+    // private static final int DEFAULT_CAPACITY = 10;
     
     // ^ Adding Elements in ArrayList (addition at last takes constant time O(1))
     // list.add(1);
@@ -37,11 +36,10 @@ public class Main {
     // System.out.println(list.get(0));
     // System.out.println(list.get(1));
     // System.out.println(list.get(2));
-    // ! throws exception - java.lang.IndexOutOfBoundsException
-    // System.out.println(list.get(3));
-
     // ^ Checking Size of ArrayList (Mind You size() gives number of elements present in the ArrayList)
     // System.out.println(list.size());    // * 3
+
+    // System.out.println(list.get(3));   // ! throws exception - java.lang.IndexOutOfBoundsException
 
     // ^ Iteration in ArrayList using for loop
     // for (int i = 0; i < list.size(); ++i) {
@@ -58,18 +56,18 @@ public class Main {
     // printArrayList(list);    // * [1, 10]
 
     // * Upper Statement Commented so state of list is: [1, 2, 10]
-    // ^ Insertion in Between 
+    // ^ Insertion in Between, .add(index, object)
     // list.add(2, 5);   // * return type is void and throws index out of bounds exception if specified index is out of limit
     // printArrayList(list);     // * [1, 2, 5, 10]
 
-    // * Replacing an Element
+    // * Replacing an Element, .set(index, object)
     // list.set(2, 7); // * Replaces and returns the element which was previously at its place (Here it returns 5), return type is Integer in this case
     // printArrayList(list);     // * [1, 2, 7, 10]
 
     // * By This we mention a default capacity, so as to reduce the process of copying and dynamically increasing size overhead
     // ArrayList<Integer> list = new ArrayList<>(1000);  
-    // System.out.println(list.size());      // * 0
-    // System.out.println(list.get(0));     // ! java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0
+    // System.out.println(list.size());       // * 0
+    // System.out.println(list.get(0));       // ! java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0
 
     // * Used to set Minimum Capacity
     // list.ensureCapacity(1000);      
@@ -104,7 +102,7 @@ public class Main {
     List<String> list3 = Arrays.asList(array);
     // System.out.println(list3.getClass().getName());   // * java.util.Arrays$ArrayList
 
-    // * In Newer Java Versions (Java 9) we can also do 
+    // * In Newer Java Versions (Java 9) we can also use List.of(List)
     // * This returns an unmodifiable list 
     // * Important to note that in this we can't even replace any element
     // List<Integer> list4 = List.of(1, 2, 3);
@@ -130,12 +128,14 @@ public class Main {
     list5.remove("Mango");
     // System.out.println(list5);    // * [Apple, Banana, Pineapple, Watermelon, Mongo, Cherry, Strawberry, Orange, Kiwi, Chickoo]
 
-    // * Caveats To remember while removing by object Value, By Default remove method takes Object type as argument and not primitive
+    // * Caveats To remember while removing by object Value, By Default remove method takes index as argument
     List<Integer> list7 = new ArrayList<>();
     list7.add(1);
     list7.add(2);
     list7.add(3);
     // list7.remove(2); // & It will remove the value at index 2, though we intended to remove the literal value 2
+    int lastElementIndex = list7.size() - 1;
+    list7.remove(lastElementIndex);        // * O(1) removal here, but by default .remove has O(n) time complexity
     // list7.remove(Integer.valueOf(2));   // * Now this is correct, as we pass an object
     // printArrayList(list7);    // * [1, 3]
 
@@ -149,8 +149,13 @@ public class Main {
     // * Time Complexity: O(1) (amortized)
     // list.remove(list.size() - 1);
 
-    // * contains method checks if an element present in list or not
-    // System.out.println(list7.contains(3));    // * true
+    // * .contains method checks if an element present in list or not
+    // * Returns true if this list contains the specified element. More formally, returns true if and only if this list contains at least one element e such that Objects.equals(o, e).
+    // * Params: o element whose presence in this list is to be tested
+    // * Returns: true if this list contains the specified element
+    // * Throws: ClassCastException - if the type of the specified element is incompatible with this list (optional)
+    // * Throws: NullPointerException - if the specified element is null and this list does not permit null elements (optional)
+    System.out.println(list7.contains(3));    // * true
     // System.out.println(list7.contains(2));    // ! false
 
     // ^ From List to Array
@@ -179,7 +184,7 @@ public class Main {
     //   }
     // }
     // list9.sort(new MyComparator());
-    list9.sort(null);           // * Using Natural Order of Sorting
+    // list9.sort(null);           // * Using Natural Order of Sorting
     // printArrayList(list9);        // * [10, 20, 30, 40]
     // * Sort using Comparator (var keyword is from Java 11 used in Lambdas)
     // list9.sort((var num1, var num2) -> {
@@ -319,6 +324,9 @@ public class Main {
     // * replaces those 10 elements with value 6
     Collections.fill(arrayList, Integer.valueOf(6));
     // printArrayList(arrayList);    // * [6, 6, 6, 6, 6, 6, 6, 6, 6, 6]
+
+    // * Practice Questions On ArrayList
+    Practice.practice();    
   }
 
   private static <T> void printArrayList(List<T> arrayList) {

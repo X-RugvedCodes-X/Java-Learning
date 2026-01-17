@@ -16,7 +16,7 @@ public class Main {
     linkedList.add(5);
     linkedList.add(4);
     System.out.println(linkedList.get(2));    // * TC = O(n)
-    // * More Methods are:- .add(Object). get(index), addLast(index), addFirst(index), getLast(), getFirst() (No Arguments for getFirst and getLast) 
+    // * More Methods are:- .add(Object). get(index), addLast(index), addFirst(index), getLast(), getFirst() (No Arguments for getFirst and getLast, getFirst() has O(1) T.C.) 
 
     // ^ Remove Methods:- remove(Object), remove(index), remove(), removeFirst(), removeLast(), removeFirstOccurrence(Object), removeLastOccurrence(Object), removeAll(Collection<?> c), removeIf(Predicate<? super>) (removeIf in Java 8)
     linkedList.removeIf(x -> x % 2 == 0);
@@ -27,7 +27,7 @@ public class Main {
     animals.removeAll(animalsToRemove);
     System.out.println(animals);    // * [Elephant, Tiger, Giraffe]
     // * removeAll method is also there in ArrayList
-
+ 
     // ^ LinkedList is a very Powerful class it can also behave like ArrayList, Stack or even Queue
     // ^ It is more Efficient for Insertion and Deletion Operation as compared to ArrayList
     // ^ For Fast Accessing and Reading Use HashTable APIs

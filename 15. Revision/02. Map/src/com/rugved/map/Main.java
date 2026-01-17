@@ -9,7 +9,7 @@ import java.util.Set;
 public class Main {
   public static void main(String[] args) {
     // HashMap<Integer, String> hashMap = new HashMap<>();
-    // * Adding Elements in A Map
+    // * Adding Elements in A Map 
     // hashMap.put(1, "Rugved");
     // hashMap.put(2, "Dada");
     // hashMap.put(3, "Sanskar");
@@ -94,9 +94,9 @@ public class Main {
     // hashMap.put(p3, "Manager");     // * new hashcode3 --> new index3
     // printHashMap(hashMap);
     // System.out.println(hashMap.size());    // ! 3, But we were expecting it to be 2 
-    // * To Clear this we make changes in Person Class
+    // * To Clear this we make changes in Person Class 
 
-    // * But Normally 
+    // * But Normally
     // Map<String, Integer> map = new HashMap<>();
     // map.put("Shubham", 90);
     // map.put("Bandya", 95);

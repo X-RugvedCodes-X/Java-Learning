@@ -28,7 +28,7 @@ public class Main {
 
     // * Some Specialized methods of Stack class
     // * returns the 1-based position from the top of the stack where the object is located; the return value -1 indicates that the object is not on the stack
-    int search = stack.search(2); // * Param as Object and returns  1-based position from top of the stack
+    int search = stack.search(2); // * Param as Object and returns 1-based position from top of the stack
     System.out.println(search);     // * 3
 
     // * Using LinkedList as Stack 
