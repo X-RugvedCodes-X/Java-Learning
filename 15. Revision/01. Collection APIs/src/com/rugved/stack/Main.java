@@ -17,7 +17,7 @@ public class Main {
     // Integer removedObject = stack.pop();  // * Removes and returns object at the top of the stack
     // System.out.println(removedObject);    // * 5
     // System.out.println(stack);            // * [1, 2, 3, 4]
-    // Integer topElement = stack.peek();  // * Looks at the object at the top of this stack without removing it from the stack. returns the object at the top of this stack
+    // Integer topElement = stack.peek();    // * Looks at the object at the top of this stack without removing it from the stack. returns the object at the top of this stack
     // System.out.println(topElement);       // * 4
     
     // boolean checkStack = stack.isEmpty();

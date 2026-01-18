@@ -10,13 +10,16 @@ public class Main {
 
     // * Java has Doubly Linked List, Elements are not stored in contagious location
     LinkedList<Integer> linkedList = new LinkedList<>();
-    linkedList.add(1);
+    linkedList.add(1);    // * TC = O(1)
     linkedList.add(2);
     linkedList.add(3);
     linkedList.add(5);
     linkedList.add(4);
+    linkedList.add(2, 10);           // * TC = O(n)
+    linkedList.addFirst(12);    // * O(1)
+    linkedList.addLast(20);    // * O(1)
     System.out.println(linkedList.get(2));    // * TC = O(n)
-    // * More Methods are:- .add(Object). get(index), addLast(index), addFirst(index), getLast(), getFirst() (No Arguments for getFirst and getLast, getFirst() has O(1) T.C.) 
+    // * More Methods are:- .add(Object). get(index), addLast(index), addFirst(index), getLast(), getFirst() (No Arguments for getFirst and getLast, getFirst() has O(1) T.C.)
 
     // ^ Remove Methods:- remove(Object), remove(index), remove(), removeFirst(), removeLast(), removeFirstOccurrence(Object), removeLastOccurrence(Object), removeAll(Collection<?> c), removeIf(Predicate<? super>) (removeIf in Java 8)
     linkedList.removeIf(x -> x % 2 == 0);

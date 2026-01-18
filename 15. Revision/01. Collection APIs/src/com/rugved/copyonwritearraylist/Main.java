@@ -18,7 +18,7 @@ public class Main {
     // * In doing write operation a new copy of list is created for every modification, The reference to the list is then updated so that subsequent reads use this new list
     // * So mind you copy is created only when write operation is done
     // * Hence this is best for Reading and Accessing
-    // CopyOnWriteArrayList<Integer> copyOnWriteArrayList = new CopyOnWriteArrayList<>();
+    // CopyOnWriteArrayList<Integer> copyOnWriteArrayLi st = new CopyOnWriteArrayList<>();
 
     // * When ArrayList is used 
     // List<String> shoppingList = new ArrayList<>();
