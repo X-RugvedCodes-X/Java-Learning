@@ -19,6 +19,7 @@
     "15. Revision\\04. Basic Garbage Collection and Weak Reference\\src",
     "15. Revision\\05. WeakHashMap\\src",
     "15. Revision\\06. Comparable\\src",
+    "15. Revision\\07. SortedMap\\src",
   ],
   "java.project.referencedLibraries": [],
   "java.project.outputPath": "out"
