@@ -16,6 +16,7 @@
     "15. Revision\\01. Collection APIs\\src",
     "15. Revision\\02. Map\\src",
     "15. Revision\\03. LRU Cache\\src",
+    "15. Revision\\04. Basic Garbage Collection and Weak Reference\\src",
   ],
   "java.project.referencedLibraries": [],
   "java.project.outputPath": "out"

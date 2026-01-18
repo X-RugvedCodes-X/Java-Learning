@@ -35,7 +35,7 @@ public class Main {
     // linkedHashMap.get("Guava"); // * Now Guava will reach at the end as we made the access order true
 
     // * It uses LRU (Least Recently Used) - which means element coming at the top is least used in the HashMap and we can either remove or do whatever to it according to our business logic
-    // * This is Cache Eviction Strategy and LRU Cache is used to optimize it, This all is achieved by 
+    // * This is Cache Eviction Strategy and LRU Cache is used to optimize it, This all is achieved by linkedHashMap
 
     // * Creating LinkedHashMap from HashMap
     HashMap<String, Integer> hashMap = new HashMap<>();
