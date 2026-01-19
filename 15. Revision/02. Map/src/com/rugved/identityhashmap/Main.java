@@ -25,11 +25,33 @@ public class Main {
     // System.out.println(identityHashMap);  // * {key = 2, key = 1}
 
     // * But Mind You 
-    IdentityHashMap<Integer, String> identityHashMap = new IdentityHashMap<>();
-    Integer key1 = 1;
-    Integer key2 = 1;
-    identityHashMap.put(key1, "one");
-    identityHashMap.put(key2, "two");
-    System.out.println(identityHashMap);    // * {1=two}
+    // IdentityHashMap<Integer, String> identityHashMap = new IdentityHashMap<>();
+    // Integer key1 = 1;
+    // Integer key2 = 1;
+    // identityHashMap.put(key1, "one");
+    // identityHashMap.put(key2, "two");
+    // System.out.println(identityHashMap);    // * {1=two} - This is due to Integer Caching
+    // * Java caches Integer objects in this range: -128 to 127
+    // So when we write:
+    // Integer key1 = 1;
+    // Integer key2 = 1;
+
+    // Java actually does this internally:
+    // key1 = Integer.valueOf(1);
+    // key2 = Integer.valueOf(1);
+
+    // And since 1 is within the cache range:
+    // key1 == key2   // true
+    // They are the same object reference 
+
+    // * Now Breaking the Integer Cache
+    IdentityHashMap<Integer, String> map = new IdentityHashMap<>();
+    Integer key1 = new Integer(1);
+    Integer key2 = new Integer(1);
+    // * key1 != key2 - Two separate entries
+    map.put(key1, "one");
+    map.put(key2, "two");
+    System.out.println(map);    // * {1=one, 1=two}
+
   }
 }
