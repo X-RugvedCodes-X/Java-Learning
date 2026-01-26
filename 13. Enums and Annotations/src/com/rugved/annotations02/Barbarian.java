@@ -1,4 +1,4 @@
-package com.rugved.annotations;
+package com.rugved.annotations02;
 
 @COC_Troop(type = "Ground", damage = 200)
 public class Barbarian {
