@@ -93,5 +93,14 @@ public class Main {
     * After Terminal Operation
     * [Anna, Babdya, Bandya, Charlie, Dada, David]
     */
+
+    // * A Stream Cannot be used anymore after a Terminal Operation 
+
+    // ^ 6. forEachOrdered - Used with ParallelStream to make things in order
+    List<Integer> numbers = Arrays.asList(-7, 14, -23, 58, -104, 207, 9, -86, 312, -45);
+    System.out.println("Using forEach With Parallel Stream: ");
+    numbers.parallelStream().forEach(System.out::println);
+    System.out.println("Using forEachOrdered With Parallel Stream: ");
+    numbers.parallelStream().forEachOrdered(System.out::println);   // * Prints the List as it is
   }
 }
