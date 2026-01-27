@@ -22,6 +22,7 @@
     "15. Revision\\07. SortedMap\\src",
     "16. String Methods and Regex\\src",
     "17. Streams\\01. Lambda Revision and Predicate Function\\src",
+    "17. Streams\\02. Method Reference and Constructor Reference\\src",
   ],
   "java.project.referencedLibraries": [],
   "java.project.outputPath": "out"
