@@ -1,6 +1,7 @@
 package com.rugved.enums01;
 
 public class Main {
+  @SuppressWarnings("unused")
   public static void main(String[] args) {
     Day monday = Day.MONDAY;
     int ordinal = monday.ordinal();
