@@ -6,7 +6,7 @@ public class RTO {
     try {
       applicant.takeInput();
       applicant.verifyAge();
-    } catch (UnderAgeException | OverAgeException e1) {
+    } catch (UnderAgeException | OverAgeException e1) { // * Mind you in this syntax both exception must be disjoint, ie. no is-a relationship should be amongst them
       try {
         applicant.takeInput();
         applicant.verifyAge();

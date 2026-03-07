@@ -15,7 +15,7 @@ public class Main {
     //   public void show() {
     //     System.out.println("In New Show()");
     //   }
-    //   // * Here if we create any specialized methods for this inner Class then we can't use it.
+      // * Here if we create any specialized methods for this inner Class then we can't use it.
     //   public void getData() {
     //     System.out.println("Get Data");
     //   }
@@ -30,7 +30,7 @@ public class Main {
     //   public void show() {
     //     System.out.println("In New Show()");
     //   }
-    //  // * Here if we create any specialized methods for this inner Class then we can't use it.
+     // * Here if we create any specialized methods for this inner Class then we can't use it.
     //   public void getData() {
     //     System.out.println("Get Data");
     //   }

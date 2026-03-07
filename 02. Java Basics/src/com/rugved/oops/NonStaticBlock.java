@@ -21,12 +21,11 @@ class Test {
   }
 };  
 
+@SuppressWarnings("unused")
 public class NonStaticBlock {
   public static void main(String[] args) {
     System.out.println("hello, non static block");
-    @SuppressWarnings("unused")
     Test t1 = new Test();
-    @SuppressWarnings("unused")
     Test t2 = new Test();
   }
 }
