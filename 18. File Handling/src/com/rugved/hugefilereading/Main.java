@@ -12,6 +12,7 @@ import java.nio.file.StandardOpenOption;
 import java.lang.foreign.MemorySegment;
 import java.lang.foreign.Arena;
 
+@SuppressWarnings({"unused", "preview"})
 public class Main {
 
   public static void main(String[] args) {
