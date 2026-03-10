@@ -25,6 +25,7 @@
     "17. Streams\\01. Lambda Revision and Predicate Function\\src",
     "17. Streams\\02. Method Reference and Constructor Reference\\src",
     "17. Streams\\03. Streams Basics\\src",
+    "18. File Handling\\src",
   ],
   "java.project.referencedLibraries": [],
   "java.project.outputPath": "out"
